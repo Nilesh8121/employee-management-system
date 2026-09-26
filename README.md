@@ -1,76 +1,184 @@
 # Employee Management System
 
-A small resume-ready Java application for managing employee records using Java, JDBC, MySQL, Maven, and object-oriented programming.
+A console-based Employee Management System developed using **Java, JDBC, MySQL, and Maven**. The application provides CRUD operations and employee filtering through a simple menu-driven interface.
 
-## Features
-- Add employee
-- View all employees
-- Search employee by ID
-- Update employee
-- Delete employee
-- Search employees by department
-- Filter employees by minimum salary
-- Input validation for required fields, email, IDs, and salary
-- MySQL persistent storage
+## 🚀 Features
 
-## Technology Stack
-- Java 17
-- JDBC
-- MySQL
-- Maven
-- OOP
+* Add new employees
+* View all employees
+* Search employee by ID
+* Update employee information
+* Delete employee records
+* Search employees by department
+* Filter employees by minimum salary
+* Input validation
+* MySQL database persistence
+* JDBC-based database connectivity
+* DAO-based database operations
 
-## Project Structure
+## 🛠️ Technologies Used
+
+| Technology   | Purpose                           |
+| ------------ | --------------------------------- |
+| Java 17      | Application development           |
+| JDBC         | Database connectivity             |
+| MySQL        | Data storage                      |
+| Maven        | Dependency and project management |
+| Git & GitHub | Version control                   |
+
+## 📂 Project Structure
+
 ```text
 EmployeeManagementSystem/
-├── pom.xml
+│
+├── src/
+│   └── main/
+│       └── java/
+│           └── com/
+│               └── employee/
+│                   └── management/
+│                       ├── DBConnection.java
+│                       ├── Employee.java
+│                       ├── EmployeeDAO.java
+│                       └── Main.java
+│
 ├── database.sql
+├── pom.xml
 ├── README.md
-└── src/main/java/com/employee/management/
-    ├── Main.java
-    ├── Employee.java
-    ├── EmployeeDAO.java
-    └── DBConnection.java
+└── .gitignore
 ```
 
-## Setup
-1. Start MySQL Server.
-2. Open MySQL Workbench.
-3. Open `database.sql` and execute it.
-4. Open `DBConnection.java` and set your MySQL password.
-5. Open CMD in the project folder.
-6. Run:
+## 🗄️ Database
+
+The project uses MySQL with the following database:
+
+```text
+employee_db
+```
+
+### Employee Table
+
+```text
+employees
+├── id
+├── name
+├── email
+├── department
+└── salary
+```
+
+The complete database setup is available in:
+
+```text
+database.sql
+```
+
+## ⚙️ Requirements
+
+Before running the project, install:
+
+* JDK 17 or later
+* Maven
+* MySQL Server
+* MySQL Workbench (recommended)
+
+## ▶️ How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Nilesh8121/employee-management-system.git
+```
+
+### 2. Open the project
+
+```bash
+cd employee-management-system
+```
+
+### 3. Configure MySQL
+
+Open:
+
+```text
+src/main/java/com/employee/management/DBConnection.java
+```
+
+Update the MySQL credentials:
+
+```java
+private static final String USER = "root";
+private static final String PASSWORD = "your_password";
+```
+
+### 4. Create the database
+
+Open MySQL Workbench and execute:
+
+```text
+database.sql
+```
+
+This creates the `employee_db` database and `employees` table.
+
+### 5. Compile the project
 
 ```bash
 mvn clean compile
+```
+
+### 6. Run the application
+
+```bash
 mvn exec:java
 ```
 
-## Example Menu
-```text
-1. Add Employee
-2. View All Employees
-3. Search Employee by ID
-4. Update Employee
-5. Delete Employee
-6. Search by Department
-7. Filter by Minimum Salary
-8. Exit
-```
+## 🖥️ Application Screenshots
 
-## Resume Description
-**Employee Management System | Java, JDBC, MySQL**
-- Developed a console-based employee management application using Java, JDBC, and MySQL.
-- Implemented CRUD operations along with department-based search and salary filtering.
-- Added input validation for employee details, email addresses, IDs, and salary values.
-- Applied OOP, DAO, prepared statements, exception handling, and database connectivity concepts.
+### Main Menu
 
-## Interview Topics
-- OOP and encapsulation
-- JDBC and PreparedStatement
-- CRUD operations
-- SQL queries
-- DAO pattern
-- Exception handling
-- Input validation
-- Maven dependency management
+![Main Menu](screenshots/main-menu.png)
+
+### Add Employee
+
+![Add Employee](screenshots/add-employee.png)
+
+### Employee List
+
+![Employee List](screenshots/employee-list.png)
+
+### Search and Filtering
+
+![Search and Filtering](screenshots/search-filter.png)
+
+## 🧠 Concepts Demonstrated
+
+This project demonstrates practical knowledge of:
+
+* Object-Oriented Programming
+* Classes and Objects
+* Encapsulation
+* Constructors
+* Exception Handling
+* Collections
+* JDBC
+* SQL
+* CRUD Operations
+* Prepared Statements
+* DAO Pattern
+* Maven Project Management
+
+## 📌 Resume Description
+
+**Employee Management System | Java, JDBC, MySQL, Maven**
+
+* Developed a console-based employee management application using Java and JDBC.
+* Implemented CRUD operations for managing employee records with MySQL persistence.
+* Added employee search, department filtering, salary filtering, and input validation.
+* Applied object-oriented programming principles and DAO-based database architecture.
+
+## 👨‍💻 Author
+
+**Nilesh Jadhav**
+
+GitHub: [Nilesh8121](https://github.com/Nilesh8121)
